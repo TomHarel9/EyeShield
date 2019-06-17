@@ -17,7 +17,7 @@ def find_match(unknown):
     unknown_face_coordinates = face_recognition.face_locations(unknown)
     unknown_encoding = face_recognition.face_encodings(unknown, unknown_face_coordinates)
 
-    suspects_encodings, suspects_names = get_suspects_info('./images/suspects')
+    suspects_encodings, suspects_names = get_suspects_info('../images/suspects')
 
     pil_img = Image.fromarray(unknown)
     draw = ImageDraw.Draw(pil_img)
@@ -42,7 +42,7 @@ def find_match(unknown):
 
     pil_img.show()
 
-image = face_recognition.load_image_file('./images/buffer/Yoav&Tom.jpg')
+image = face_recognition.load_image_file('../images/buffer/Tom&Yoav&Roi&Sagi&Hanny.jpg')
 image_encoding = face_recognition.face_encodings(image)[0]
 
 find_match(image)

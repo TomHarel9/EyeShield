@@ -16,13 +16,14 @@ def framesFilter(frame):
     #     frame = cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
     print(faces, profileFaces)
     if faces != () or profileFaces != ():
-        print("Yes")
+        print("Face detected!")
         return img
+    print("No face detected")
     return None
 
 
 
-img = cv2.imread('C:\\Users\\tomharel\Desktop\Software Engineering\\4th Year\Final Project\\Face.jpg', 1)
+img = cv2.imread('C:\\Users\\tomharel\Desktop\Software Engineering\\4th Year\Final Project\\NotFace.jpg', 1)
 
 isDetectFaces = framesFilter(img)
 
