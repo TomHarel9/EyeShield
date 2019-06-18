@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'testGUI.ui',
 # licensing of 'testGUI.ui' applies.
 #
-# Created: Sun Jun 16 23:52:22 2019
+# Created: Tue Jun 18 15:31:55 2019
 #      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -34,6 +34,16 @@ class Ui_MainWindow(object):
         self.tabWidget.setObjectName("tabWidget")
         self.ProcessImage = QtWidgets.QWidget()
         self.ProcessImage.setObjectName("ProcessImage")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.ProcessImage)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.frame = QtWidgets.QFrame(self.ProcessImage)
+        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame.setObjectName("frame")
+        self.treeView = QtWidgets.QTreeView(self.frame)
+        self.treeView.setGeometry(QtCore.QRect(-5, -9, 911, 651))
+        self.treeView.setObjectName("treeView")
+        self.verticalLayout.addWidget(self.frame)
         self.tabWidget.addTab(self.ProcessImage, "")
         self.DBQueries = QtWidgets.QWidget()
         self.DBQueries.setObjectName("DBQueries")
@@ -57,7 +67,7 @@ class Ui_MainWindow(object):
         self.Records = QtWidgets.QWidget()
         self.Records.setObjectName("Records")
         self.EnterRecords = QtWidgets.QPushButton(self.Records)
-        self.EnterRecords.setGeometry(QtCore.QRect(760, 30, 56, 21))
+        self.EnterRecords.setGeometry(QtCore.QRect(780, 30, 56, 21))
         self.EnterRecords.setObjectName("EnterRecords")
         self.RecordsTextEdit = QtWidgets.QTextEdit(self.Records)
         self.RecordsTextEdit.setGeometry(QtCore.QRect(500, 20, 221, 41))
@@ -78,7 +88,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(2)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):

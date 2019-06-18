@@ -55,7 +55,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <property name="iconSize">
      <size>
@@ -67,6 +67,28 @@
      <attribute name="title">
       <string>Process Image</string>
      </attribute>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QFrame" name="frame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QTreeView" name="treeView">
+         <property name="geometry">
+          <rect>
+           <x>-5</x>
+           <y>-9</y>
+           <width>911</width>
+           <height>651</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
     </widget>
     <widget class="QWidget" name="DBQueries">
      <attribute name="title">
@@ -147,7 +169,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QPushButton" name="EnterRecords">
       <property name="geometry">
        <rect>
-        <x>760</x>
+        <x>780</x>
         <y>30</y>
         <width>56</width>
         <height>21</height>

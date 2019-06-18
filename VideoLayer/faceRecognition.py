@@ -13,7 +13,8 @@ def get_suspects_info(path):
             suspects_names.append(i.split(".")[0])
     return suspects_encodings, suspects_names
 
-def find_match(unknown):
+def find_match(unknown_path):
+    unknown = face_recognition.load_image_file(unknown_path)
     unknown_face_coordinates = face_recognition.face_locations(unknown)
     unknown_encoding = face_recognition.face_encodings(unknown, unknown_face_coordinates)
 
@@ -42,9 +43,10 @@ def find_match(unknown):
 
     pil_img.show()
 
-image = face_recognition.load_image_file('../images/buffer/Tom&Yoav&Roi&Sagi&Hanny.jpg')
-image_encoding = face_recognition.face_encodings(image)[0]
 
-find_match(image)
+#
+# path = '../images/buffer/Tom&Yoav&Roi&Sagi&Hanny.jpg'
+#
+# find_match(path)
 
 
