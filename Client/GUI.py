@@ -6,7 +6,7 @@ from PySide2.QtWidgets import QApplication, QMainWindow
 from PySide2 import QtGui, QtWidgets, QtCore
 
 from Client import UI
-from VideoLayer import faceRecognition
+from VideoLayer import FaceRecognitionTester
 
 
 class GUI(UI.Ui_MainWindow, QtWidgets.QMainWindow):
@@ -50,7 +50,7 @@ class GUI(UI.Ui_MainWindow, QtWidgets.QMainWindow):
     def activateFaceRecognition(self):
         index = self.dialog.treeView.currentIndex()
         file_path = self.model.filePath(index)
-        faceRecognition.find_match(file_path)
+        FaceRecognitionTester.find_match(file_path)
 
     def DBQueriesTab(self):
         comboBox = self.dialog.queriesComboBox

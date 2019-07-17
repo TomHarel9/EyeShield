@@ -2,11 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9264055-d72c-4719-86a4-f28dc377fbde" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/DAL/MongoHelper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DAL/MongoHelperTester.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Utils/singleton.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VideoLayer/FaceRecognition.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VideoLayer/VideoStream.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VideoLayer/VideoStreamTester.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/EyeShield.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EyeShield.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BI/Case.py" beforeDir="false" afterPath="$PROJECT_DIR$/BI/Case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BI/Image.py" beforeDir="false" afterPath="$PROJECT_DIR$/BI/Image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BI/Suspect.py" beforeDir="false" afterPath="$PROJECT_DIR$/BI/Suspect.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Client/GUI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Client/UI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/testGUI.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Client/testGUI.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VideoLayer/faceRecognition.py" beforeDir="false" afterPath="$PROJECT_DIR$/VideoLayer/faceRecognition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/eye_shield_conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/Config/eye_shield_conf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VideoLayer/FaceDetaction.py" beforeDir="false" afterPath="$PROJECT_DIR$/VideoLayer/FaceDetactionTester.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VideoLayer/FaceDetectionImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/VideoLayer/FaceDetection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VideoLayer/caputre_video.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VideoLayer/faceRecognition.py" beforeDir="false" afterPath="$PROJECT_DIR$/VideoLayer/FaceRecognitionTester.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,24 +41,24 @@
     <SUITE FILE_PATH="coverage/EyeShield$FaceDetaction__1_.coverage" NAME="FaceDetaction (1) Coverage Results" MODIFIED="1560700441312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VideoLayer" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Client/GUI.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DAL/MongoHelper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="34" column="47" lean-forward="true" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
+            <state relative-caret-position="283">
+              <caret line="27" column="22" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="22" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VideoLayer/faceRecognition.py">
+        <entry file="file://$PROJECT_DIR$/VideoLayer/FaceRecognitionTester.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="306">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -54,10 +67,85 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Client/UI.py">
+        <entry file="file://$PROJECT_DIR$/VideoLayer/FaceRecognition.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+            <state relative-caret-position="130">
+              <caret line="26" column="15" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DAL/MongoHelperTester.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="303">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VideoLayer/FaceDetection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/VideoLayer/VideoStream.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="26" column="55" lean-forward="true" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VideoLayer/VideoStreamTester.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" selection-start-line="12" selection-end-line="13" selection-end-column="13" />
+              <folding>
+                <element signature="e#1#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BI/Case.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BI/Image.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BI/Suspect.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -88,34 +176,42 @@
       <list>
         <option value="$PROJECT_DIR$/VideoStreaming/caputre_video.py" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/Config/eye_shield_conf.py" />
         <option value="$PROJECT_DIR$/VideoLayer/caputre_video.py" />
-        <option value="$PROJECT_DIR$/BI/Image.py" />
-        <option value="$PROJECT_DIR$/BI/Suspect.py" />
-        <option value="$PROJECT_DIR$/BI/Case.py" />
         <option value="$PROJECT_DIR$/UI.py" />
         <option value="$PROJECT_DIR$/GUI.py" />
-        <option value="$PROJECT_DIR$/VideoLayer/FaceDetectionImage.py" />
         <option value="$PROJECT_DIR$/Client/quexemple.py" />
         <option value="$PROJECT_DIR$/GUITest.py" />
         <option value="$PROJECT_DIR$/Client/FileBrows.py" />
         <option value="$PROJECT_DIR$/VideoLayer/faceRecognition.py" />
         <option value="$PROJECT_DIR$/Client/GUI.py" />
+        <option value="$PROJECT_DIR$/Config/eye_shield_conf.py" />
+        <option value="$USER_HOME$/Desktop/תואר הנדסת תוכנה/שנה ג/סמסטר א/שפות תכנות/singleton.py" />
+        <option value="$PROJECT_DIR$/Utils/singleton.py" />
+        <option value="$PROJECT_DIR$/BI/Case.py" />
+        <option value="$PROJECT_DIR$/VideoLayer/VideoStreaming.py" />
+        <option value="$PROJECT_DIR$/VideoLayer/FaceDetectionImage.py" />
+        <option value="$PROJECT_DIR$/VideoLayer/VideoStreamTester.py" />
+        <option value="$PROJECT_DIR$/VideoLayer/FaceDetection.py" />
+        <option value="$PROJECT_DIR$/BI/Image.py" />
+        <option value="$PROJECT_DIR$/BI/Suspect.py" />
+        <option value="$PROJECT_DIR$/DAL/MongoHelper.py" />
+        <option value="$PROJECT_DIR$/DAL/MongoHelperTester.py" />
+        <option value="$PROJECT_DIR$/VideoLayer/FaceRecognition.py" />
+        <option value="$PROJECT_DIR$/VideoLayer/VideoStream.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="y" value="-12" />
-    <option name="width" value="1944" />
-    <option name="height" value="1044" />
+    <option name="x" value="-13" />
+    <option name="y" value="-13" />
+    <option name="width" value="1945" />
+    <option name="height" value="1045" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -126,7 +222,32 @@
             <path>
               <item name="EyeShield" type="b2602c69:ProjectViewProjectNode" />
               <item name="EyeShield" type="462c0819:PsiDirectoryNode" />
+              <item name="BI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EyeShield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EyeShield" type="462c0819:PsiDirectoryNode" />
               <item name="Client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EyeShield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EyeShield" type="462c0819:PsiDirectoryNode" />
+              <item name="Config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EyeShield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EyeShield" type="462c0819:PsiDirectoryNode" />
+              <item name="DAL" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EyeShield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EyeShield" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EyeShield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EyeShield" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EyeShield" type="b2602c69:ProjectViewProjectNode" />
@@ -137,6 +258,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -148,7 +270,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -168,74 +290,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.GUI (1)">
-    <configuration name="FileBrows" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="EyeShield" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Client" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Client/FileBrows.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="GUI (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="EyeShield" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Client" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Client/GUI.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="GUITest" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="EyeShield" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GUITest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="faceRecognition (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.VideoStream">
+    <configuration name="FaceDetectionImage" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="EyeShield" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -248,7 +304,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/VideoLayer/faceRecognition.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Tomer Gliksman\Documents\GitHub\EyeShield\VideoLayer\FaceDetection.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -257,7 +313,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="quexemple" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="MongoHelper" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="EyeShield" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -265,12 +321,78 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Client" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DAL" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Client/quexemple.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DAL/MongoHelper.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MongoHelperTester" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="EyeShield" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DAL" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DAL/MongoHelperTester.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="VideoStream" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="EyeShield" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/VideoLayer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/VideoLayer/VideoStream.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="VideoStreamTester" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="EyeShield" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/VideoLayer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/VideoLayer/VideoStreamTester.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -281,11 +403,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.GUI (1)" />
-        <item itemvalue="Python.faceRecognition (1)" />
-        <item itemvalue="Python.FileBrows" />
-        <item itemvalue="Python.GUITest" />
-        <item itemvalue="Python.quexemple" />
+        <item itemvalue="Python.VideoStream" />
+        <item itemvalue="Python.MongoHelperTester" />
+        <item itemvalue="Python.MongoHelper" />
+        <item itemvalue="Python.VideoStreamTester" />
+        <item itemvalue="Python.FaceDetectionImage" />
       </list>
     </recent_temporary>
   </component>
@@ -305,31 +427,32 @@
       <workItem from="1560606358985" duration="910000" />
       <workItem from="1560607367008" duration="2953000" />
       <workItem from="1560611192554" duration="36472000" />
+      <workItem from="1563211721016" duration="51785000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48758000" />
+    <option name="totallyTimeSpent" value="100543000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23319837" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17280643" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32994923" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36548224" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993232" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989953" visible="true" weight="0.29237288" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3983051" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50040483" side_tool="true" weight="0.3248731" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49959514" weight="0.3248731" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010047" side_tool="true" weight="0.29237288" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49959514" weight="0.32485875" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49878544" weight="0.3282572" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -343,13 +466,18 @@
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/EyeShield$VideoStream.coverage" NAME="VideoStream Coverage Results" MODIFIED="1563348861924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VideoLayer" />
     <SUITE FILE_PATH="coverage/EyeShield$caputre_video.coverage" NAME="caputre_video Coverage Results" MODIFIED="1559751758578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VideoStreaming" />
+    <SUITE FILE_PATH="coverage/EyeShield$MongoHelper.coverage" NAME="MongoHelper Coverage Results" MODIFIED="1563302091094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DAL" />
+    <SUITE FILE_PATH="coverage/EyeShield$MongoHelperTester.coverage" NAME="MongoHelperTester Coverage Results" MODIFIED="1563346824994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DAL" />
+    <SUITE FILE_PATH="coverage/EyeShield$singleton.coverage" NAME="singleton Coverage Results" MODIFIED="1563277659882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/תואר הנדסת תוכנה/שנה ג/סמסטר א/שפות תכנות" />
+    <SUITE FILE_PATH="coverage/EyeShield$VideoStreamTester.coverage" NAME="VideoStreamTester Coverage Results" MODIFIED="1563294570329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VideoLayer" />
+    <SUITE FILE_PATH="coverage/EyeShield$FaceDetectionImage.coverage" NAME="FaceDetectionImage Coverage Results" MODIFIED="1563293537730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VideoLayer" />
     <SUITE FILE_PATH="coverage/EyeShield$main.coverage" NAME="main Coverage Results" MODIFIED="1559751783112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EyeShield$GUI__1_.coverage" NAME="GUI (1) Coverage Results" MODIFIED="1563286075904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Client" />
+    <SUITE FILE_PATH="coverage/EyeShield$FaceDetaction.coverage" NAME="FaceDetaction Coverage Results" MODIFIED="1563290373847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VideoLayer" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/images/buffer/Hanny.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/buffer/Dad.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -361,34 +489,7 @@
         <state relative-caret-position="-663" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get-pip.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#1136#1150#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VideoLayer/caputre_video.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BI/Image.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BI/Suspect.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BI/Case.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/get-pip.py" />
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -396,106 +497,162 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Config/eye_shield_conf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="72" column="87" selection-start-line="72" selection-start-column="87" selection-end-line="72" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/TasksConfigCreatorDialog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3442">
-          <caret line="222" column="20" selection-start-line="222" selection-start-column="13" selection-end-line="222" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/TasksConfigCreatorAdapter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="15" column="111" lean-forward="true" selection-start-line="15" selection-start-column="111" selection-end-line="15" selection-end-column="111" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py" />
+    <entry file="file://$PROJECT_DIR$/Client/TasksConfigCreatorDialog.py" />
+    <entry file="file://$PROJECT_DIR$/Client/TasksConfigCreatorAdapter.py" />
     <entry file="file://$PROJECT_DIR$/VideoLayer/haarcascade_frontalface_default.xml">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/quexemple.py" />
+    <entry file="file://$PROJECT_DIR$/GUITest.py" />
+    <entry file="file://$PROJECT_DIR$/Client/FileBrows.py" />
+    <entry file="file://$PROJECT_DIR$/Config/eye_shield_conf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="12" selection-start-line="4" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/singleton.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/תואר הנדסת תוכנה/שנה ג/סמסטר א/שפות תכנות/singleton.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/images/buffer/Hanny&amp;Sapir.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/VideoLayer/FaceDetectionImage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/images/buffer/Hanny_Group_1.jpg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/VideoLayer/FaceDetaction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/images/buffer/Hanny.jpg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/quexemple.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/images/buffer/Tom.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/buffer/Roi_Group_1.jpg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Client/UI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="289">
           <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUITest.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/FileBrows.py">
+    <entry file="file://$PROJECT_DIR$/Client/GUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="10" column="45" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="45" />
+        <state relative-caret-position="365">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VideoLayer/faceRecognition.py">
+    <entry file="file://$PROJECT_DIR$/images/suspects/Hanny.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VideoLayer/FaceDetactionTester.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="170">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VideoLayer/VideoStreamTester.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="e#1#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BI/Case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BI/Image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BI/Suspect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VideoLayer/FaceDetection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VideoLayer/FaceRecognitionTester.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/GUI.py">
+    <entry file="file://$PROJECT_DIR$/DAL/MongoHelperTester.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="34" column="47" lean-forward="true" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
+        <state relative-caret-position="303">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAL/MongoHelper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="27" column="22" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VideoLayer/FaceRecognition.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="26" column="15" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VideoLayer/VideoStream.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="26" column="55" lean-forward="true" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
