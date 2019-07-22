@@ -34,6 +34,12 @@ class DbHelper(Singleton):
                                          suspect['images'], suspect['cases']))
         return suspects_list
 
+    def get_all_suspects_names(self):
+        suspects_names_list = []
+        for suspect in self.db.suspects.find():
+            suspects_names_list.append(suspect['first_name'] + " " + suspect['last_name'])
+        return suspects_names_list
+
     def get_all_cases(self):
         cases_list = []
         for case in self.db.cases.find():

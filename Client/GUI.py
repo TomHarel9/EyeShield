@@ -1,6 +1,11 @@
 import os
 import sys
 
+import cv2
+from BI.Case import Case
+from BI.Suspect import Suspect
+from DAL.MongoHelper import DbHelper
+
 os.environ['QT_API'] = "pyside2"
 from PySide2.QtWidgets import QApplication, QMainWindow
 from PySide2 import QtGui, QtWidgets, QtCore
@@ -11,18 +16,32 @@ from VideoLayer import FaceRecognitionTester
 
 class GUI(UI.Ui_MainWindow, QtWidgets.QMainWindow):
     def __init__(self):
+        self.DHL = DbHelper()
         super(GUI, self).__init__()
         self.dialog = UI.Ui_MainWindow()
         self.dialog.setupUi(self)
-        self.dialog.activateQuery.clicked.connect(self.DBQueriesTab)
+        self.dialog.activateQuery.clicked.connect(self.addNewCase)
         self.dialog.EnterRecords.clicked.connect(self.RecordsTab)
+        self.dialog.refresh.clicked.connect(self.forReview)
         self.dialog.treeView.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
         self.dialog.treeView.customContextMenuRequested.connect(self.context_menu)
         self.populate()
 
 
+    def create_image_folder(self, obj, objName):
+        if objName == "forReview":
+            pass
+        elif objName == "suspect":
+            Suspect(obj)
+            imagesArr = obj.get_images()
+
+            for img in imagesArr:
+                cv2.imshow('image',img)
+
+
+
     def populate(self):
-        path = "C:\\Users\\tomharel\\Documents\\GitHub\\EyeShield\images"
+        path = "//C"
         self.model = QtWidgets.QFileSystemModel()
         self.model.setRootPath((QtCore.QDir.rootPath()))
         self.dialog.treeView.setModel(self.model)
@@ -52,21 +71,87 @@ class GUI(UI.Ui_MainWindow, QtWidgets.QMainWindow):
         file_path = self.model.filePath(index)
         FaceRecognitionTester.find_match(file_path)
 
-    def DBQueriesTab(self):
-        comboBox = self.dialog.queriesComboBox
-        if comboBox.currentIndex() == 0:
-            print("activate query 1")
-        elif comboBox.currentIndex() == 1:
-            print("activate query 2")
-        elif comboBox.currentIndex() == 2:
-            print("activate query 3")
+    def addNewCase(self):
+        flag = 1
+        caseName = self.dialog.NameTextEdit.toPlainText()
+        caseID = self.dialog.CaseIDTextEdit.toPlainText()
+        susID = self.dialog.SusTextEdit.toPlainText()
+        susIDArr = susID.split(",")
 
-    def simulateCaseQuery(self, caseID):
-        print(caseID)
+        newCase = Case(caseID, caseName, susIDArr)
+        allSuspect = self.DHL.get_all_suspects_names()
+
+        for sus in susIDArr:
+            if sus in allSuspect:
+                pass
+            else:
+                QtWidgets.QMessageBox.information(self,"Invalid Data"
+                                , "The suspect: " + sus + " does not exist in our DB", QtWidgets.QMessageBox.Ok)
+                flag = 0
+
+        if flag:
+            self.DHL.add_case(newCase)
+            QtWidgets.QMessageBox.information(self, "Successful Action"
+                                              , "The new case has been added",
+                                              QtWidgets.QMessageBox.Ok)
+
+
 
     def RecordsTab(self):
-        editText = self.dialog.RecordsTextEdit
-        self.simulateCaseQuery(editText.toPlainText())
+        caseNumber = self.dialog.RecordsTextEdit.toPlainText()
+        case = self.DHL.get_case_by_id(caseNumber)
+        self.dialog.caseDetails.append("Case ID:\t\t" + case.get_ID() + "\n\n")
+        self.dialog.caseDetails.append("Case Name:\t" + case.get_name() + "\n\n")
+        self.dialog.caseDetails.append("Suspects List:      " )
+        for sus in case.suspects:
+            self.dialog.caseDetails.append("\t\t" + sus)
+        self.dialog.caseDetails.append("Images:      ")
+        sus = self.DHL.get_suspect_by_tz(203973797)
+        images = self.DHL.get_images(sus.images)
+        os.makedirs("..//images//case" + str(case.number_id))
+        for i in range(len(images)):
+            path = "..//images//case" + str(case.number_id) + "//" + str(i) + ".jpg"
+            print(path)
+            cv2.imwrite(path, images[i].data)
+        print("done")
+
+
+
+    def forReview(self):
+        imageMap = QtGui.QPixmap("C:\\Users\\tomharel\\Documents\\GitHub\\EyeShield\images\suspects\Roi.jpg")
+        lbl = QtWidgets.QLabel(self)
+        lbl.setPixmap(imageMap)
+        lbl.setFixedWidth(150)
+        lbl.setAlignment(QtCore.Qt.AlignCenter)
+        self.dialog.forReviewLayout.addWidget(lbl)
+        imageMap = QtGui.QPixmap("C:\\Users\\tomharel\\Documents\\GitHub\\EyeShield\images\suspects\Tom.jpg")
+        lbl = QtWidgets.QLabel(self)
+        lbl.setPixmap(imageMap)
+        lbl.setFixedWidth(150)
+        lbl.setAlignment(QtCore.Qt.AlignRight)
+        self.dialog.forReviewLayout.addWidget(lbl)
+        imageMap = QtGui.QPixmap("C:\\Users\\tomharel\\Documents\\GitHub\\EyeShield\images\suspects\Hanny.jpg")
+        lbl = QtWidgets.QLabel(self)
+        lbl.setPixmap(imageMap)
+        lbl.setAlignment(QtCore.Qt.AlignRight)
+        self.dialog.forReviewLayout.addWidget(lbl)
+        imageMap = QtGui.QPixmap("C:\\Users\\tomharel\\Documents\\GitHub\\EyeShield\images\suspects\Sapir.jpg")
+        lbl = QtWidgets.QLabel(self)
+        lbl.setPixmap(imageMap)
+        self.dialog.forReviewLayout.addWidget(lbl)
+        imageMap = QtGui.QPixmap("C:\\Users\\tomharel\\Documents\\GitHub\\EyeShield\images\suspects\Tomer.jpg")
+        lbl = QtWidgets.QLabel(self)
+        lbl.setPixmap(imageMap)
+        self.dialog.forReviewLayout.addWidget(lbl)
+        imageMap = QtGui.QPixmap("C:\\Users\\tomharel\\Documents\\GitHub\\EyeShield\images\suspects\Yoav.jpg")
+        lbl = QtWidgets.QLabel(self)
+        lbl.setPixmap(imageMap)
+        self.dialog.forReviewLayout.addWidget(lbl)
+
+
+        #self.dialog.caseDetails.append("Case ID:           " + case.get_ID() + "\n\n")
+
+
 
 
 if __name__ == "__main__":

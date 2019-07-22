@@ -16,5 +16,17 @@ class Case:
     def add_suspect(self, suspect_id):
         self.cases.append(suspect_id)
 
+    def get_name(self):
+        return self.name
+
+    def get_ID(self):
+        return self.number_id
+
+    def get_suspects(self):
+        return self.suspects
+
+    def get_images(self):
+        return self.images
+
     def __str__(self):
         return str(self.__class__) + ": " + str(self.__dict__)
