@@ -25,22 +25,12 @@ class GUI(UI.Ui_MainWindow, QtWidgets.QMainWindow):
         self.dialog.refresh.clicked.connect(self.forReview)
         self.dialog.treeView.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
         self.dialog.treeView.customContextMenuRequested.connect(self.context_menu)
-        self.populate()
+        self.populateProcessImage()
+        self.dialog.treeViewRecords.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
+        self.dialog.treeViewRecords.customContextMenuRequested.connect(self.context_menu2)
 
 
-    def create_image_folder(self, obj, objName):
-        if objName == "forReview":
-            pass
-        elif objName == "suspect":
-            Suspect(obj)
-            imagesArr = obj.get_images()
-
-            for img in imagesArr:
-                cv2.imshow('image',img)
-
-
-
-    def populate(self):
+    def populateProcessImage(self):
         path = "//C"
         self.model = QtWidgets.QFileSystemModel()
         self.model.setRootPath((QtCore.QDir.rootPath()))
@@ -63,6 +53,27 @@ class GUI(UI.Ui_MainWindow, QtWidgets.QMainWindow):
 
     def open_file(self):
         index = self.dialog.treeView.currentIndex()
+        file_path = self.model.filePath(index)
+        os.startfile(file_path)
+
+    def populateRecords(self, path):
+        self.model = QtWidgets.QFileSystemModel()
+        self.model.setRootPath((QtCore.QDir.rootPath()))
+        self.dialog.treeViewRecords.setModel(self.model)
+        self.dialog.treeViewRecords.setRootIndex(self.model.index(path))
+        self.dialog.treeViewRecords.setSortingEnabled(True)
+
+    def context_menu2(self):
+        menu = QtWidgets.QMenu()
+        open = menu.addAction("Open")
+        cursor = QtGui.QCursor()
+        action = menu.exec_(cursor.pos())
+        if action == open:
+            self.open_file2()
+
+
+    def open_file2(self):
+        index = self.dialog.treeViewRecords.currentIndex()
         file_path = self.model.filePath(index)
         os.startfile(file_path)
 
@@ -108,48 +119,17 @@ class GUI(UI.Ui_MainWindow, QtWidgets.QMainWindow):
         self.dialog.caseDetails.append("Images:      ")
         sus = self.DHL.get_suspect_by_tz(203973797)
         images = self.DHL.get_images(sus.images)
-        os.makedirs("..//images//case" + str(case.number_id))
+        dirPath = "..//images//case" + str(case.number_id)
+        os.makedirs(dirPath)
         for i in range(len(images)):
             path = "..//images//case" + str(case.number_id) + "//" + str(i) + ".jpg"
-            print(path)
             cv2.imwrite(path, images[i].data)
-        print("done")
+        self.populateRecords("..//images//case" + str(case.number_id))
 
 
 
     def forReview(self):
-        imageMap = QtGui.QPixmap("C:\\Users\\tomharel\\Documents\\GitHub\\EyeShield\images\suspects\Roi.jpg")
-        lbl = QtWidgets.QLabel(self)
-        lbl.setPixmap(imageMap)
-        lbl.setFixedWidth(150)
-        lbl.setAlignment(QtCore.Qt.AlignCenter)
-        self.dialog.forReviewLayout.addWidget(lbl)
-        imageMap = QtGui.QPixmap("C:\\Users\\tomharel\\Documents\\GitHub\\EyeShield\images\suspects\Tom.jpg")
-        lbl = QtWidgets.QLabel(self)
-        lbl.setPixmap(imageMap)
-        lbl.setFixedWidth(150)
-        lbl.setAlignment(QtCore.Qt.AlignRight)
-        self.dialog.forReviewLayout.addWidget(lbl)
-        imageMap = QtGui.QPixmap("C:\\Users\\tomharel\\Documents\\GitHub\\EyeShield\images\suspects\Hanny.jpg")
-        lbl = QtWidgets.QLabel(self)
-        lbl.setPixmap(imageMap)
-        lbl.setAlignment(QtCore.Qt.AlignRight)
-        self.dialog.forReviewLayout.addWidget(lbl)
-        imageMap = QtGui.QPixmap("C:\\Users\\tomharel\\Documents\\GitHub\\EyeShield\images\suspects\Sapir.jpg")
-        lbl = QtWidgets.QLabel(self)
-        lbl.setPixmap(imageMap)
-        self.dialog.forReviewLayout.addWidget(lbl)
-        imageMap = QtGui.QPixmap("C:\\Users\\tomharel\\Documents\\GitHub\\EyeShield\images\suspects\Tomer.jpg")
-        lbl = QtWidgets.QLabel(self)
-        lbl.setPixmap(imageMap)
-        self.dialog.forReviewLayout.addWidget(lbl)
-        imageMap = QtGui.QPixmap("C:\\Users\\tomharel\\Documents\\GitHub\\EyeShield\images\suspects\Yoav.jpg")
-        lbl = QtWidgets.QLabel(self)
-        lbl.setPixmap(imageMap)
-        self.dialog.forReviewLayout.addWidget(lbl)
-
-
-        #self.dialog.caseDetails.append("Case ID:           " + case.get_ID() + "\n\n")
+        return
 
 
 

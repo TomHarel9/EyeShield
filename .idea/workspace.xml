@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9264055-d72c-4719-86a4-f28dc377fbde" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/EyeShield.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EyeShield.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BI/Case.py" beforeDir="false" afterPath="$PROJECT_DIR$/BI/Case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BI/Suspect.py" beforeDir="false" afterPath="$PROJECT_DIR$/BI/Suspect.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Client/GUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Client/UI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/testGUI.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Client/testGUI.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL/MongoHelper.py" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/MongoHelper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL/MongoHelperTester.py" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/MongoHelperTester.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/case123/0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/case123/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/case123/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/case123/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/case123/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/case123/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/case123/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/case123/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/case123/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/case123/9.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +28,7 @@
     <SUITE FILE_PATH="coverage/EyeShield$FaceDetectionImage.coverage" NAME="FaceDetectionImage Coverage Results" MODIFIED="1560700126144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VideoLayer" />
     <SUITE FILE_PATH="coverage/EyeShield$GUI__1_.coverage" NAME="GUI (1) Coverage Results" MODIFIED="1560875241097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Client" />
     <SUITE FILE_PATH="coverage/EyeShield$MongoHelperTester.coverage" NAME="MongoHelperTester Coverage Results" MODIFIED="1563806555337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DAL" />
-    <SUITE FILE_PATH="coverage/EyeShield$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1563812574868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Client" />
+    <SUITE FILE_PATH="coverage/EyeShield$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1563823412429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Client" />
     <SUITE FILE_PATH="coverage/EyeShield$faceRecognition__1_.coverage" NAME="faceRecognition (1) Coverage Results" MODIFIED="1560873716057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VideoLayer" />
     <SUITE FILE_PATH="coverage/EyeShield$FaceDetaction__1_.coverage" NAME="FaceDetaction (1) Coverage Results" MODIFIED="1560700441312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VideoLayer" />
     <SUITE FILE_PATH="coverage/EyeShield$caputre_video.coverage" NAME="caputre_video Coverage Results" MODIFIED="1555870995629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VideoStreaming" />
@@ -39,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Client/GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="107" column="55" selection-start-line="107" selection-start-column="55" selection-end-line="107" selection-end-column="55" />
+            <state relative-caret-position="165">
+              <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -56,6 +60,15 @@
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Client/UI.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -116,6 +129,9 @@
       <find>context_menu</find>
       <find>os</find>
       <find>lay</find>
+      <find>populate</find>
+      <find>treeviewR</find>
+      <find>model</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -174,6 +190,11 @@
               <item name="EyeShield" type="b2602c69:ProjectViewProjectNode" />
               <item name="EyeShield" type="462c0819:PsiDirectoryNode" />
               <item name="BI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EyeShield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EyeShield" type="462c0819:PsiDirectoryNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EyeShield" type="b2602c69:ProjectViewProjectNode" />
@@ -359,15 +380,16 @@
       <workItem from="1560607367008" duration="2953000" />
       <workItem from="1560611192554" duration="36472000" />
       <workItem from="1563211721016" duration="51785000" />
-      <workItem from="1563357864998" duration="38783000" />
+      <workItem from="1563357864998" duration="42175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139326000" />
+    <option name="totallyTimeSpent" value="142718000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1757085" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -542,13 +564,6 @@
     <entry file="file://$PROJECT_DIR$/images/suspects/Roi.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/UI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="118" column="20" selection-start-line="118" selection-start-column="17" selection-end-line="118" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/VideoLayer/FaceRecognition.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -608,16 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DAL/MongoHelper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BI/Image.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -643,10 +648,34 @@
     <entry file="file://$PROJECT_DIR$/images/case123/6.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/DAL/MongoHelper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/UI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/os.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="220" selection-start-line="220" selection-end-line="220" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Client/GUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="107" column="55" selection-start-line="107" selection-start-column="55" selection-end-line="107" selection-end-column="55" />
+        <state relative-caret-position="165">
+          <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

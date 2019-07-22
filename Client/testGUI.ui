@@ -61,7 +61,7 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>2</number>
       </property>
       <property name="iconSize">
        <size>
@@ -318,9 +318,41 @@ p, li { white-space: pre-wrap; }
           <x>25</x>
           <y>110</y>
           <width>1141</width>
-          <height>751</height>
+          <height>221</height>
          </rect>
         </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_2">
+        <property name="geometry">
+         <rect>
+          <x>-1</x>
+          <y>329</y>
+          <width>1201</width>
+          <height>551</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QTreeView" name="treeViewRecords">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>1</y>
+           <width>1141</width>
+           <height>541</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+        </widget>
        </widget>
       </widget>
       <widget class="QWidget" name="ForReview">

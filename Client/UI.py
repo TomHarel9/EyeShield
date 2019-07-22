@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'testGUI.ui',
 # licensing of 'testGUI.ui' applies.
 #
-# Created: Mon Jul 22 13:02:20 2019
+# Created: Mon Jul 22 22:18:47 2019
 #      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -101,8 +101,18 @@ class Ui_MainWindow(object):
         self.textBrowser.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.textBrowser.setObjectName("textBrowser")
         self.caseDetails = QtWidgets.QTextBrowser(self.Records)
-        self.caseDetails.setGeometry(QtCore.QRect(25, 110, 1141, 751))
+        self.caseDetails.setGeometry(QtCore.QRect(25, 110, 1141, 221))
+        self.caseDetails.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.caseDetails.setObjectName("caseDetails")
+        self.frame_2 = QtWidgets.QFrame(self.Records)
+        self.frame_2.setGeometry(QtCore.QRect(-1, 329, 1201, 551))
+        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_2.setObjectName("frame_2")
+        self.treeViewRecords = QtWidgets.QTreeView(self.frame_2)
+        self.treeViewRecords.setGeometry(QtCore.QRect(25, 1, 1141, 541))
+        self.treeViewRecords.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.treeViewRecords.setObjectName("treeViewRecords")
         self.tabWidget.addTab(self.Records, "")
         self.ForReview = QtWidgets.QWidget()
         self.ForReview.setObjectName("ForReview")
@@ -127,7 +137,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(3)
+        self.tabWidget.setCurrentIndex(2)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
