@@ -1,6 +1,6 @@
 import face_recognition
 import cv2
-from PIL import Image, ImageDraw, ImageFont
+#   from PIL import Image, ImageDraw, ImageFont
 from DAL.MongoHelper import DbHelper
 
 

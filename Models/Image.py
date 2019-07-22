@@ -1,11 +1,12 @@
 
 class Image:
 
-    def __init__(self, data, location, timestamp, file_id=None):
+    def __init__(self, data, location, timestamp, file_id=None, tagged=False):
         self.data = data
         self.location = location
         self.timestamp = timestamp
         self.file_id = file_id
+        self.tagged = tagged
         # self.suspects_list = []
 
     # def add_suspect(self, tz):
@@ -24,6 +25,12 @@ class Image:
     def set_file_id(self, file_id):
         if not self.file_id:
             self.file_id = file_id
+
+    def isTagged(self):
+        return self.tagged
+
+    def tag(self):
+        self.tagged = True
 
     # def get_suspects(self):
     #     return self.suspects_list

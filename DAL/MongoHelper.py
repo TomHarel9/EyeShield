@@ -1,12 +1,13 @@
 from pymongo import MongoClient
 import gridfs
-from Config import  eye_shield_conf as conf
+from Config import eye_shield_conf as conf
 from Utils.singleton import Singleton
-from BI.Suspect import Suspect
-from BI.Case import Case
-from BI.Image import Image
+from Models.Suspect import Suspect
+from Models.Case import Case
+from Models.Image import Image
 import cv2
 import numpy as np
+
 
 class DbHelper(Singleton):
 
@@ -23,7 +24,8 @@ class DbHelper(Singleton):
 
     def save_image(self, image):
         data = cv2.imencode(".png", image.get_data())[1].tostring()
-        file_id = self.fs.put(data, location=image.get_location(), timestamp=image.get_timestamp())
+        file_id = self.fs.put(data, location=image.get_location(), timestamp=image.get_timestamp(),
+                              tagged=image.isTagged())
         image.set_file_id(file_id)
         return file_id
 
@@ -50,7 +52,7 @@ class DbHelper(Singleton):
         images_list = []
         for im in self.fs.find():
             data = cv2.imdecode(np.fromstring(im.read(), dtype=np.uint8), 1)
-            images_list.append(Image(data, im.location, im.timestamp, im._id))
+            images_list.append(Image(data, im.location, im.timestamp, im._id, im.tagged))
         return images_list
 
     def get_images(self, images_ids):
@@ -59,7 +61,7 @@ class DbHelper(Singleton):
             if self.fs.exists(file_id):
                 im = self.fs.get(file_id)
                 data = cv2.imdecode(np.fromstring(im.read(), dtype=np.uint8), 1)
-                images_list.append(Image(data, im.location, im.timestamp, im._id))
+                images_list.append(Image(data, im.location, im.timestamp, im._id, im.tagged))
             else:
                 print("file not exist")
         return images_list
@@ -69,9 +71,8 @@ class DbHelper(Singleton):
         if self.fs.exists(file_id):
             im = self.fs.get(file_id)
             data = cv2.imdecode(np.fromstring(im.read(), dtype=np.uint8), 1)
-            return Image(data, im.location, im.timestamp, im._id)
+            return Image(data, im.location, im.timestamp, im._id, im.tagged)
         return None
-
 
     def get_suspect_by_tz(self, tz):
         q = {'tz': tz}
@@ -87,5 +88,22 @@ class DbHelper(Singleton):
     def update_suspect(self, suspect):
         query = {'tz': suspect.tz}
         newvalues = {"$set": suspect.asdict()}
-        self.db.suspects.update_one(query, newvalues,upsert=False)
+        self.db.suspects.update_one(query, newvalues, upsert=False)
 
+    def update_case(self, case):
+        query = {'number_id': case.number_id}
+        newvalues = {"$set": case.asdict()}
+        self.db.cases.update_one(query, newvalues, upsert=False)
+
+    def update_image_metadata(self, image):
+        query = {'_id': image.file_id}
+        newvalues = {"$set": {'location': image.location, 'timestamp': image.timestamp, 'tagged': image.isTagged()}}
+        self.db.fs.files.update(query, newvalues)
+
+    def get_all_untagged_images(self):
+        images_list = []
+        query = {'tagged': False}
+        for im in self.fs.find(query):
+            data = cv2.imdecode(np.fromstring(im.read(), dtype=np.uint8), 1)
+            images_list.append(Image(data, im.location, im.timestamp, im._id, im.tagged))
+        return images_list

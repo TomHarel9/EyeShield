@@ -1,16 +1,9 @@
 from DAL.MongoHelper import  DbHelper
-from BI.Suspect import Suspect
+from Models.Suspect import Suspect
 import cv2
-from BI.Image import Image
+from Models.Image import Image
 import time
 from bson import ObjectId
-
-db = DbHelper()
-c = db.get_case_by_id("123")
-img = "..//images//suspects//Tom.jpg"
-id = db.save_image(img)
-print(img)
-c.add_image(id)
 
 #db.add_suspect(Suspect(333333333, "Hanny", "Roas", 26))
 #img = cv2.imread("C:\\Users\\tomharel\Documents\GitHub\EyeShield\images\suspects\\Hanny.jpg")

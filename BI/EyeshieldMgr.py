@@ -5,9 +5,13 @@ from VideoLayer import FaceRecognition
 from DAL.MongoHelper import DbHelper
 from Models.Image import Image
 import time
+import threading
 
-class VideoStream:
+
+class EyeShieldMgr(threading.Thread):
+
     def __init__(self):
+        threading.Thread.__init__(self)
         self.isStart = False
         self.rtmp_addr = conf.CAMERA_RTMP_ADDR
         self.db = DbHelper()
@@ -34,8 +38,3 @@ class VideoStream:
 
     def stop_capture(self):
         self.isStart =False
-
-
-v = VideoStream()
-
-v.start_capture()

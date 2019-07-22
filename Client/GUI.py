@@ -2,8 +2,8 @@ import os
 import sys
 
 import cv2
-from BI.Case import Case
-from BI.Suspect import Suspect
+from Models.Case import Case
+from Models.Suspect import Suspect
 from DAL.MongoHelper import DbHelper
 
 os.environ['QT_API'] = "pyside2"
@@ -16,8 +16,8 @@ from VideoLayer import FaceRecognitionTester
 
 class GUI(UI.Ui_MainWindow, QtWidgets.QMainWindow):
     def __init__(self):
-        self.DHL = DbHelper()
         super(GUI, self).__init__()
+        self.DHL = DbHelper()
         self.dialog = UI.Ui_MainWindow()
         self.dialog.setupUi(self)
         self.dialog.activateQuery.clicked.connect(self.addNewCase)
