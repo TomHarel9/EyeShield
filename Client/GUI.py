@@ -114,8 +114,13 @@ class GUI(UI.Ui_MainWindow, QtWidgets.QMainWindow):
         arr = file_path.split('/')
         imgIndex = int(arr[len(arr) - 1].split('.')[0])
         images = self.DHL.get_all_untagged_images()
-        images[imgIndex].tag()
-        self.DHL.update_image_metadata()
+        answer = QtWidgets.QMessageBox.question(self, "Tag", "Would you like to approve this tag?",
+                                       QtWidgets.QMessageBox.Yes, QtWidgets.QMessageBox.No)
+        if answer == QtWidgets.QMessageBox.Yes:
+            images[imgIndex].tag()
+            self.DHL.update_image_metadata(images[imgIndex])
+        else:
+            pass
 
 
 
@@ -167,7 +172,16 @@ class GUI(UI.Ui_MainWindow, QtWidgets.QMainWindow):
     def forReview(self):
         images = self.DHL.get_all_untagged_images()
         dirPath = "..//images//forReview"
-        os.makedirs(dirPath)
+        if os.path.isdir(dirPath):
+            for the_file in os.listdir(dirPath):
+                file_path = os.path.join(dirPath, the_file)
+                try:
+                    if os.path.isfile(file_path):
+                        os.unlink(file_path)
+                except Exception as e:
+                    print(e)
+        else:
+            os.makedirs(dirPath)
         for i in range(len(images)):
             path = dirPath + "//" + str(i) + ".jpg"
             cv2.imwrite(path, images[i].data)
