@@ -1,41 +1,22 @@
 import cv2
 import Config.eye_shield_conf as conf
-from VideoLayer import FaceDetection
-from VideoLayer import FaceRecognition
-from DAL.MongoHelper import DbHelper
-from Models.Image import Image
-import time
+
 
 class VideoStream:
     def __init__(self):
-        self.isStart = False
-        self.rtmp_addr = conf.CAMERA_RTMP_ADDR
-        self.db = DbHelper()
+        self.cap = None
 
-    def start_capture(self):
-        self.isStart = True
-        cap = cv2.VideoCapture(self.rtmp_addr)
-        i=0
-        while(i < 10):
-        #while(self.isStart):
-            ret, frame = cap.read()
-            res = FaceDetection.framesFilter(frame)
-            if(res):
-                im = Image(frame, "Tel Aviv", time.time())
-                file_id = self.db.save_image(im)
-                tz_list = FaceRecognition.find_match(frame)
-                for tz in tz_list:
-                    suspect = self.db.get_suspect_by_tz(tz)
-                    suspect.add_image(file_id)
-                    self.db.update_suspect(suspect)
-                i = i+1
+    def start(self):
+        self.cap = cv2.VideoCapture(conf.CAMERA_RTMP_ADDR)
 
-        cap.release()
+    def get_frame(self):
+        frame = None
+        if self.cap:
+            ret, frame = self.cap.read()
 
-    def stop_capture(self):
-        self.isStart =False
+        return frame
 
-
-v = VideoStream()
-
-v.start_capture()
+    def stop(self):
+        if self.cap:
+            self.cap.release()
+            self.cap = None

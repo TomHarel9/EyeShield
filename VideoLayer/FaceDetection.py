@@ -1,8 +1,8 @@
 import cv2
 
 def framesFilter(frame):
-    frontalFaceCascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-    profileFaceCascade = cv2.CascadeClassifier('haarcascade_profileface.xml')
+    frontalFaceCascade = cv2.CascadeClassifier('VideoLayer/haarcascade_frontalface_default.xml')
+    profileFaceCascade = cv2.CascadeClassifier('VideoLayer/haarcascade_profileface.xml')
 
     frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     frame_gray = cv2.equalizeHist(frame_gray)

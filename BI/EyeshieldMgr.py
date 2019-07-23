@@ -1,7 +1,6 @@
-import cv2
-import Config.eye_shield_conf as conf
 from VideoLayer import FaceDetection
 from VideoLayer import FaceRecognition
+from VideoLayer import VideoStream
 from DAL.MongoHelper import DbHelper
 from Models.Image import Image
 import time
@@ -13,28 +12,36 @@ class EyeShieldMgr(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
         self.isStart = False
-        self.rtmp_addr = conf.CAMERA_RTMP_ADDR
         self.db = DbHelper()
+        self.video_stream = VideoStream.VideoStream()
 
     def start_capture(self):
         self.isStart = True
-        cap = cv2.VideoCapture(self.rtmp_addr)
-        i=0
-        while(i < 10):
-        #while(self.isStart):
-            ret, frame = cap.read()
+        while self.isStart:
+            self.video_stream.start()
+            frame = self.video_stream.get_frame()
+            if frame is None:
+                print("invalid frame")
+                continue
             res = FaceDetection.framesFilter(frame)
-            if(res):
-                im = Image(frame, "Tel Aviv", time.time())
+            if res:
+                im = Image(frame, "Raanana", time.time())
                 file_id = self.db.save_image(im)
                 tz_list = FaceRecognition.find_match(frame)
                 for tz in tz_list:
+                    print(tz)
                     suspect = self.db.get_suspect_by_tz(tz)
                     suspect.add_image(file_id)
                     self.db.update_suspect(suspect)
-                i = i+1
+                    im.tag()
+                    self.db.update_image_metadata(im)
 
-        cap.release()
+    def run(self):
+        self.start_capture()
+
+    def stop(self):
+        self.stop_capture()
 
     def stop_capture(self):
-        self.isStart =False
+        self.isStart = False
+        self.video_stream.stop()
