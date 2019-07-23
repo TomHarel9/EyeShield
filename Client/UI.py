@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'testGUI.ui',
 # licensing of 'testGUI.ui' applies.
 #
-# Created: Mon Jul 22 22:18:47 2019
+# Created: Tue Jul 23 13:04:44 2019
 #      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -119,14 +119,17 @@ class Ui_MainWindow(object):
         self.refresh = QtWidgets.QPushButton(self.ForReview)
         self.refresh.setGeometry(QtCore.QRect(500, 10, 261, 41))
         self.refresh.setObjectName("refresh")
-        self.gridLayoutWidget = QtWidgets.QWidget(self.ForReview)
-        self.gridLayoutWidget.setGeometry(QtCore.QRect(9, 70, 1171, 791))
-        self.gridLayoutWidget.setObjectName("gridLayoutWidget")
-        self.forReviewLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
-        self.forReviewLayout.setContentsMargins(0, 0, 0, 0)
-        self.forReviewLayout.setObjectName("forReviewLayout")
+        self.frame_3 = QtWidgets.QFrame(self.ForReview)
+        self.frame_3.setGeometry(QtCore.QRect(-1, 70, 1191, 811))
+        self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_3.setObjectName("frame_3")
+        self.treeViewForReview = QtWidgets.QTreeView(self.frame_3)
+        self.treeViewForReview.setGeometry(QtCore.QRect(5, 0, 1191, 811))
+        self.treeViewForReview.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.treeViewForReview.setObjectName("treeViewForReview")
         self.tabWidget.addTab(self.ForReview, "")
-        self.gridLayout.addWidget(self.tabWidget, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.tabWidget, 0, 1, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1300, 18))
@@ -137,7 +140,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(2)
+        self.tabWidget.setCurrentIndex(3)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):

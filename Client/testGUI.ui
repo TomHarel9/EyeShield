@@ -46,7 +46,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
+    <item row="0" column="1">
      <widget class="QTabWidget" name="tabWidget">
       <property name="minimumSize">
        <size>
@@ -61,7 +61,7 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>3</number>
       </property>
       <property name="iconSize">
        <size>
@@ -372,16 +372,34 @@ p, li { white-space: pre-wrap; }
          <string>Refresh</string>
         </property>
        </widget>
-       <widget class="QWidget" name="gridLayoutWidget">
+       <widget class="QFrame" name="frame_3">
         <property name="geometry">
          <rect>
-          <x>9</x>
+          <x>-1</x>
           <y>70</y>
-          <width>1171</width>
-          <height>791</height>
+          <width>1191</width>
+          <height>811</height>
          </rect>
         </property>
-        <layout class="QGridLayout" name="forReviewLayout"/>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QTreeView" name="treeViewForReview">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>0</y>
+           <width>1191</width>
+           <height>811</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+        </widget>
        </widget>
       </widget>
      </widget>

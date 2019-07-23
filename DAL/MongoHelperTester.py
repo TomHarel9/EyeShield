@@ -5,6 +5,16 @@ from Models.Image import Image
 import time
 from bson import ObjectId
 
+db = DbHelper()
+
+case = db.get_case_by_id(123)
+sus1 = db.get_suspect_by_tz(204686422)
+sus2 = db.get_suspect_by_tz(203973797)
+
+for img in sus2.images:
+    case.add_image(img)
+db.update_case(case)
+
 #db.add_suspect(Suspect(333333333, "Hanny", "Roas", 26))
 #img = cv2.imread("C:\\Users\\tomharel\Documents\GitHub\EyeShield\images\suspects\\Hanny.jpg")
 #fileId = db.save_image(Image(img, "Netanya", time.time()))

@@ -28,6 +28,8 @@ class GUI(UI.Ui_MainWindow, QtWidgets.QMainWindow):
         self.populateProcessImage()
         self.dialog.treeViewRecords.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
         self.dialog.treeViewRecords.customContextMenuRequested.connect(self.context_menu2)
+        self.dialog.treeViewForReview.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
+        self.dialog.treeViewForReview.customContextMenuRequested.connect(self.context_menu3)
 
 
     def populateProcessImage(self):
@@ -56,6 +58,11 @@ class GUI(UI.Ui_MainWindow, QtWidgets.QMainWindow):
         file_path = self.model.filePath(index)
         os.startfile(file_path)
 
+    def activateFaceRecognition(self):
+        index = self.dialog.treeView.currentIndex()
+        file_path = self.model.filePath(index)
+        FaceRecognitionTester.find_match(file_path)
+
     def populateRecords(self, path):
         self.model = QtWidgets.QFileSystemModel()
         self.model.setRootPath((QtCore.QDir.rootPath()))
@@ -77,10 +84,36 @@ class GUI(UI.Ui_MainWindow, QtWidgets.QMainWindow):
         file_path = self.model.filePath(index)
         os.startfile(file_path)
 
-    def activateFaceRecognition(self):
-        index = self.dialog.treeView.currentIndex()
+
+    def populateForReview(self, path):
+        self.model = QtWidgets.QFileSystemModel()
+        self.model.setRootPath((QtCore.QDir.rootPath()))
+        self.dialog.treeViewForReview.setModel(self.model)
+        self.dialog.treeViewForReview.setRootIndex(self.model.index(path))
+        self.dialog.treeViewForReview.setSortingEnabled(True)
+
+    def context_menu3(self):
+        menu = QtWidgets.QMenu()
+        open = menu.addAction("Open")
+        tag = menu.addAction("Tag")
+        cursor = QtGui.QCursor()
+        action = menu.exec_(cursor.pos())
+        if action == open:
+            self.open_file3()
+        elif action == tag:
+            self.tag()
+
+    def open_file3(self):
+        index = self.dialog.treeViewForReview.currentIndex()
         file_path = self.model.filePath(index)
-        FaceRecognitionTester.find_match(file_path)
+        os.startfile(file_path)
+
+    def tag(self):
+        index = self.dialog.treeViewForReview.currentIndex()
+        file_path = self.model.filePath(index)
+        print(file_path)
+
+
 
     def addNewCase(self):
         flag = 1
@@ -109,27 +142,32 @@ class GUI(UI.Ui_MainWindow, QtWidgets.QMainWindow):
 
 
     def RecordsTab(self):
-        caseNumber = self.dialog.RecordsTextEdit.toPlainText()
+        caseNumber = int(self.dialog.RecordsTextEdit.toPlainText())
         case = self.DHL.get_case_by_id(caseNumber)
-        self.dialog.caseDetails.append("Case ID:\t\t" + case.get_ID() + "\n\n")
-        self.dialog.caseDetails.append("Case Name:\t" + case.get_name() + "\n\n")
+        self.dialog.caseDetails.append("Case ID:\t\t" + str(case.get_ID()) + "\n\n")
+        self.dialog.caseDetails.append("Case Name:\t" + str(case.get_name()) + "\n\n")
         self.dialog.caseDetails.append("Suspects List:      " )
         for sus in case.suspects:
             self.dialog.caseDetails.append("\t\t" + sus)
         self.dialog.caseDetails.append("Images:      ")
-        sus = self.DHL.get_suspect_by_tz(203973797)
-        images = self.DHL.get_images(sus.images)
+        images = self.DHL.get_images(case.get_images())
         dirPath = "..//images//case" + str(case.number_id)
         os.makedirs(dirPath)
         for i in range(len(images)):
-            path = "..//images//case" + str(case.number_id) + "//" + str(i) + ".jpg"
+            path = dirPath + "//" + str(i) + ".jpg"
             cv2.imwrite(path, images[i].data)
-        self.populateRecords("..//images//case" + str(case.number_id))
+        self.populateRecords(dirPath)
 
 
 
     def forReview(self):
-        return
+        images = self.DHL.get_all_untagged_images()
+        dirPath = "..//images//forReview"
+        os.makedirs(dirPath)
+        for i in range(len(images)):
+            path = dirPath + "//" + str(i) + ".jpg"
+            cv2.imwrite(path, images[i].data)
+        self.populateForReview(dirPath)
 
 
 
