@@ -111,7 +111,11 @@ class GUI(UI.Ui_MainWindow, QtWidgets.QMainWindow):
     def tag(self):
         index = self.dialog.treeViewForReview.currentIndex()
         file_path = self.model.filePath(index)
-        print(file_path)
+        arr = file_path.split('/')
+        imgIndex = int(arr[len(arr) - 1].split('.')[0])
+        images = self.DHL.get_all_untagged_images()
+        images[imgIndex].tag()
+        self.DHL.update_image_metadata()
 
 
 

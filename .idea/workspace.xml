@@ -4,9 +4,15 @@
     <list default="true" id="c9264055-d72c-4719-86a4-f28dc377fbde" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Client/GUI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Client/UI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/testGUI.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Client/testGUI.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL/MongoHelperTester.py" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/MongoHelperTester.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/forReview/0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/forReview/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/forReview/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/forReview/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/forReview/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/forReview/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/forReview/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/forReview/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/forReview/8.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +25,7 @@
     <SUITE FILE_PATH="coverage/EyeShield$FaceDetectionImage.coverage" NAME="FaceDetectionImage Coverage Results" MODIFIED="1560700126144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VideoLayer" />
     <SUITE FILE_PATH="coverage/EyeShield$GUI__1_.coverage" NAME="GUI (1) Coverage Results" MODIFIED="1560875241097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Client" />
     <SUITE FILE_PATH="coverage/EyeShield$MongoHelperTester.coverage" NAME="MongoHelperTester Coverage Results" MODIFIED="1563827750204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DAL" />
-    <SUITE FILE_PATH="coverage/EyeShield$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1563881308532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Client" />
+    <SUITE FILE_PATH="coverage/EyeShield$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1563881940432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Client" />
     <SUITE FILE_PATH="coverage/EyeShield$faceRecognition__1_.coverage" NAME="faceRecognition (1) Coverage Results" MODIFIED="1560873716057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VideoLayer" />
     <SUITE FILE_PATH="coverage/EyeShield$FaceDetaction__1_.coverage" NAME="FaceDetaction (1) Coverage Results" MODIFIED="1560700441312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VideoLayer" />
     <SUITE FILE_PATH="coverage/EyeShield$caputre_video.coverage" NAME="caputre_video Coverage Results" MODIFIED="1555870995629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VideoStreaming" />
@@ -34,17 +40,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Client/GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="113" column="23" selection-start-line="113" selection-start-column="23" selection-end-line="113" selection-end-column="23" />
+            <state relative-caret-position="268">
+              <caret line="117" column="39" selection-start-line="117" selection-start-column="39" selection-end-line="117" selection-end-column="39" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Models/Image.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-306" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DAL/MongoHelper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5">
-              <caret line="95" column="54" selection-start-line="95" selection-start-column="54" selection-end-line="95" selection-end-column="54" />
+            <state relative-caret-position="216">
+              <caret line="97" column="29" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="29" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -167,6 +180,11 @@
               <item name="EyeShield" type="b2602c69:ProjectViewProjectNode" />
               <item name="EyeShield" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EyeShield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EyeShield" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -344,23 +362,23 @@
       <workItem from="1563357864998" duration="42773000" />
       <workItem from="1563826575556" duration="9975000" />
       <workItem from="1563873724387" duration="6000" />
-      <workItem from="1563875487075" duration="1884000" />
+      <workItem from="1563875487075" duration="3375000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155181000" />
+    <option name="totallyTimeSpent" value="156672000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1854251" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1854251" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32994923" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989953" visible="true" weight="0.2893401" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989953" visible="true" weight="0.2893401" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.40270728" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -554,9 +572,6 @@
     <entry file="file://$PROJECT_DIR$/images/case123/2.jpg" />
     <entry file="file://$PROJECT_DIR$/images/case123/3.jpg" />
     <entry file="file://$PROJECT_DIR$/images/case123/6.jpg" />
-    <entry file="file://$PROJECT_DIR$/Models/Image.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Models/Suspect.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -597,10 +612,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DAL/MongoHelper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="95" column="54" selection-start-line="95" selection-start-column="54" selection-end-line="95" selection-end-column="54" />
+        <state relative-caret-position="216">
+          <caret line="97" column="29" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="29" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -609,8 +629,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Client/GUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="113" column="23" selection-start-line="113" selection-start-column="23" selection-end-line="113" selection-end-column="23" />
+        <state relative-caret-position="268">
+          <caret line="117" column="39" selection-start-line="117" selection-start-column="39" selection-end-line="117" selection-end-column="39" />
         </state>
       </provider>
     </entry>
